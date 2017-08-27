@@ -51,6 +51,14 @@ Q：为什么不选用BLS短签名算法呢？
 
 闪电网络两个核心技术：1、序列到期可撤销合约（Recoverable sequence maturity contract）；2、杂凑时间锁定合约（Hash-time locked contract）。这两大技术共同构成了闪电网络。
 
+目前，闪电网络正在开发中。主要有三个语言的实现，它们分别是C、Go、Scala。
+
+项目地址分别是：
+
+			  https://github.com/ElementsProject/lightning
+			  https://github.com/lightningnetwork/lnd
+			  https://github.com/acinq/eclair
+				
 闪电网络的详细理解见博客。
 
 #比特币协议有点乱：使用大端数，小端数，固定长度数，变长数，自定义编码（Base58Check），DER编码，各种各样的密码算法。
