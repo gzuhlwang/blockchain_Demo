@@ -34,9 +34,13 @@
 
 #比特币进阶
 
-##1、sidechain（侧链）
+##1、sidechains（侧链）
 
 目前侧链技术主要由Blockstream公司负责开发，该公司由Adam Back领衔。
+
+侧链白皮书地址：[https://www.blockstream.com/sidechains.pdf](https://www.blockstream.com/sidechains.pdf "Enabling Blockchain Innovations with Pegged Sidechains")
+
+[Elements](https://elementsproject.org/)（元素链）项目是由BlockStream公司开发的侧链参考实现，开发语言C++。
 
 ##2、隔离见证
 
@@ -47,7 +51,9 @@
 相较于ECDSA，Schnorr签名具有**更短的签名**（64字节，即512比特，而非71～72字节）、更快的签名/验证速度。
 
 Schnorr的**优势**表现在：可实现多重数字签名与批验证，即多个用户对同一消息的签名可聚合成单个，且仅需要单词验证过程。
-Schnorr算法是可证安全的，但Schnorr本人申请了专利的。
+Schnorr算法是可证安全的，但Schnorr本人申请了专利的（2008年，Schnorr的专利到期）。
+
+关于Schnorr签名在比特币中的运用，比特币核心开发者Pieter Wuille在2016年10月10日的Scaling Bitcoin研讨会上做了题为“Schnorr signature in Bitcoin”的presentation。slides地址：[https://prezi.com/09lr4goiujol/schnorr-signatures-in-bitcoin/](https://prezi.com/09lr4goiujol/schnorr-signatures-in-bitcoin/ "Schnorr signature for Bitcoin")
 
 Q：为什么不选用BLS短签名算法呢？
 
@@ -67,6 +73,25 @@ Q：为什么不选用BLS短签名算法呢？
 闪电网络的详细理解见博客。
 
 闪电网络的缺点：
+
+#比特币重要的会议
+
+##Scalingbitcoin（比特币扩容大会）
+
+自2015年举办以来，已经成为比特币社区交流扩容提案，探讨比特币技术的旗舰性大会。大会覆盖内容非常专业，可以说，技术和理论并重。
+
+比特币扩容会议主页：[https://scalingbitcoin.org/](https://scalingbitcoin.org/ "比特币扩容会议")
+
+主页cover了历年的presentation，文字记录，视频等等。是跟踪社区扩容方向的好去处。差不多每年10月举办。
+
+##Consensus（共识大会）
+纽约共识大会由[CoinDesk](https://www.coindesk.com/)主办。CoinDesk主页上有历年共识大会的相关情况。
+每年五月在纽约举行。
+
+##区块链年度大事和大会
+
+[区块链事件和大会](https://www.coindesk.com/bitcoin-events/)cover了当年的重要大事和会议。
+
 
 #比特币协议有点乱：使用大端数，小端数，固定长度数，变长数，自定义编码（Base58Check），DER编码，各种各样的密码算法。
 
