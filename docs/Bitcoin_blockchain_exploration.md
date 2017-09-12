@@ -27,6 +27,7 @@
 
 ##5、Merkle tree & SPV
 
+SPV客户端：Multibit、Bitcoin Wallet、Electrum。
 
 ##6、吞吐量 transaction per second(tps)
 理论上，比特币系统能达到7tps，但实际上只有3tps。因为共识是需要发生时间的；验证是需要花时间的（帐户余额验证、双重支付判断等）；验证花的时间主要来自比特币对签名的验证，签名验证时基于栈的，验完一笔以后在验另一笔交易。
