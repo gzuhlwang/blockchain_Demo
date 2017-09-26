@@ -1,7 +1,8 @@
 
 
 关于比特币区块链，我们得搞明白以下这些概念和原理。
-#比特币基础
+
+#Part 1 比特币基础
 
 ##1、比特币网络
 	
@@ -10,42 +11,140 @@
 	player
 		miner
 		user
+
 ##2、采矿
+
 	。区块链
-	。块
+
+	。区块
+
 	。难度
+
+   
 ##3、交易
+
 	。脚本系统
+
+脚本执行是基于栈的处理方式，数据、指令进栈，验证过程比较花时间。
+
 	。输出
+
 		。输出锁
+
+比特币最小单位是“聪”，即10^-8,总聪数为2.1x10^15.对于64位处理器来说，高精度浮点计数的限制导致单个数值不能超过2^53，约等于9x10^15。
+
 ##4、密钥对和地址
+
 	。私钥
+
 	。公钥
+
 		。数字签名
+
 			签名+验证
+
 	。地址
 
 ##5、Merkle tree & SPV
 
+
 SPV客户端：Multibit、Bitcoin Wallet、Electrum。
 
+##6、相关工具
+
+	。比特币客户端
+
+	比特币客户端用于和比特币网络进行交互，同时可以参与网络的维护。
+
+	。完整客户端
+		
+		存储所有的交易历史记录，功能完备；
+
+		。轻量级客户端
+		不保存交易副本，交易需要向别人查询；
+
+		。在线客户端
+		通过网页模式来浏览第三方服务器提供的服务；
+
+	。钱包
+	比特币钱包可以存储和保护用户的私钥，并提供查询比特币余额、收发比特币等功能。根据私钥存储方式不同，钱包主要分为以下几种：
+
+		。离线钱包（冷钱包）
+		离线存储私钥，安全性相对强，但无法直接发送交易，便利性差
+		。本地钱包
+		本地设备存储私钥，可直接向比特币网络发送交易，易用性强，但本地设备存在被攻击风险
+		。在线钱包
+		用钱包服务器存储经用户口令加密过的私钥，易用性强，但钱包服务器同样可能被攻击
+		。多重签名钱包
+		由多方共同管理一个钱包地址，比如2 of 3模式下。2017年7月20日 - Parity Multisig电子钱包版本1.5+的漏洞被发现,使得攻击者从三个高安全的多重签名合约中窃取到超过15万以太坊(约3000万美元)。
+
+	。矿机
+
+		普通的CPU（2009）——》GPU(2010)——》FPGA（2011年末）——》ASIC矿机（2013年初）——》矿池（mining pool）。短短数年间，比特币矿机的技术走完了过去几十年集成电路技术的进化历程，并且还颇有创新之处。确实是哪里有利益，哪里的技术就飞速发展！
+
+
+
+##7、 put them together
+
+已有的元素：
+
+1. public keys as identities
+
+1. time stamping
+
+1. hash chain
+ 
+1. incentives
+
+1. proof of work
+
+
+
 ##6、吞吐量 transaction per second(tps)
+
 理论上，比特币系统能达到7tps，但实际上只有3tps。因为共识是需要发生时间的；验证是需要花时间的（帐户余额验证、双重支付判断等）；验证花的时间主要来自比特币对签名的验证，签名验证时基于栈的，验完一笔以后在验另一笔交易。
 
+#Part 2 比特币创新设计
 
-#比特币进阶
+##1、适当激励(suitable incentives)
+
+##2、适应性难度调整(adaptive difficulty adjustment)
+
+##3、open（via PoW）；easy to join/leave
+
+##4、scalable to a huge network of nodes;very lightweight communication
+
+
+#Part 3 比特币进阶
+
+##0、Bloom filter（布隆过滤器）
+
+
 
 ##1、sidechains（侧链）
 
-目前侧链技术主要由Blockstream公司负责开发，该公司由Adam Back领衔。
+侧链**协议**（ps：不是特指某个区块链，而是指遵守侧链协议的所有区块链）允许资产在比特币区块链和其他区块链之间互转。这一项目也来自比特币社区，最早是在2013年12月提出的，2014年4月立项，目前侧链技术主要由Blockstream公司负责开发，该公司由Adam Back领衔。
 
-侧链白皮书地址：[https://www.blockstream.com/sidechains.pdf](https://www.blockstream.com/sidechains.pdf "Enabling Blockchain Innovations with Pegged Sidechains")
+侧链协议于2014年10月在白皮书《Enabling Blockchain Innovations with Pegged Sidechains》（用楔入式侧链实现区块链创新）中公开。侧链白皮书地址：[https://www.blockstream.com/sidechains.pdf](https://www.blockstream.com/sidechains.pdf "Enabling Blockchain Innovations with Pegged Sidechains")
 
 [Elements](https://elementsproject.org/)（元素链）项目是由BlockStream公司开发的侧链参考实现，开发语言C++。
 
+侧链协议用到了简单支付验证证明（SPV Proof）。
+
+侧链技术最早由BlockStream公司进行探索，于2015年10月联合合作伙伴发布了基于侧链的商业化应用Liquid。经过一年多的探索，BlockStream于2017年1月发表文章《Strong Federations：An Interoperable Blockchain Solution to Centralized Third Party Risks》，被称为对侧链早期白皮书的补充和改良。白皮书着重描述了联合挂钩（federated peg）的相关概念和应用。
+
+此外，还有一些其他公司或组织也在探索如何合理地应用侧链技术，包括ConsenSys、Rootstock、Lisk（比特币上做侧链）等。
+
 ##2、隔离见证
 
+隔离见证是指将交易中的签名部分从交易的输入中隔离出来，放到交易末尾的被称为见证（witness）的字段当中。对交易ID的计算将不再包含这一签名部分，这也是交易延展性问题的一种解法，给引入闪电网络等第二层协议增强了安全性。
+
+同时，SW将区块容量理论上提高到4MB。对于隔离见证的描述详见5个BIP（BIP 141～BIP 145）。
+
 2017年8月24日，隔离见证正式在比特币主网激活，开启了一个比特币新未来。
+
+	BU（Bitcoin Unlimited）方案
+	BU方案是指扩展比特币客户端，使矿工可以自由配置他们想要生成和验证的区块容量。Bitcoin Unlimited Improvement Proposal
 
 ##3、Schnorr签名算法
 
@@ -61,7 +160,10 @@ Q：为什么不选用BLS短签名算法呢？
 
 ##4、比特币闪电网络
 
-闪电网络两个核心技术：1、序列到期可撤销合约（Recoverable sequence maturity contract）；2、杂凑时间锁定合约（Hash-time locked contract）。这两大技术共同构成了闪电网络。
+闪电网络的主要思路十分简单——将大量交易放到比特币区块链之外进行，只把关键环节放到链上进行确认。该设计最早于2015年2月在论文《The Bitcoin Lightning Network:Scalable Off-Chain Instant Payments》中提出。
+闪电网络主要通过引入智能合约的思想来完善链下的交易渠道。
+
+闪电网络两个核心技术：1、**序列到期可撤销合约**（Recoverable sequence maturity contract，RSMC）；2、杂凑时间锁定合约（Hash-time locked contract，HTLC）。这两大技术共同构成了闪电网络。RSMC保障了两个人之间的直接交易可以在链下完成，HTLC保障了任意两个人之间的转账都可以通过一条“支付”通道来完成。闪电网络整合这两种机制，就可以实现任意两个人之间的交易都在链下完成。这两大技术共同构成了闪电网络。在整个交易中，智能合约起到了中介的作用，而区块链网络则确保最终的交易结果被确认。
 
 目前，闪电网络正在开发中。主要有三个语言的实现，它们分别是C、Go、Scala。
 
@@ -75,7 +177,13 @@ Q：为什么不选用BLS短签名算法呢？
 
 闪电网络的缺点：
 
-#比特币重要的会议
+
+#Part 4 Conclusion
+
+比特币作为数字货币领域的重大突破，对分布式记账领域有着很深远的影响。比特币网络系统中并没有完全从头进行技术的创新，而是有机地组合了密码学、博弈论、记账技术、分布式系统和网络、控制论等领域已有的成果。
+
+
+#附：比特币重要的会议
 
 ##Scalingbitcoin（比特币扩容大会）
 
@@ -97,6 +205,7 @@ Q：为什么不选用BLS短签名算法呢？
 #比特币协议有点乱：使用大端数，小端数，固定长度数，变长数，自定义编码（Base58Check），DER编码，各种各样的密码算法。
 
 #如何理解比特币网络是“peer-to-peer 网络”？
+
 1、每一个人（比特币客户端）互相连接，因此这是一个网络。
 
 2、网络上的每个人（比特币客户端）是平等的，因此是同等地位的人（peers）。
