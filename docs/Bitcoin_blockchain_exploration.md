@@ -252,9 +252,9 @@ ps：节点需要共享两类交易：新鲜交易（即最近进入网络的交
 <a title="The version in Little-Endian (reversed) format, four bytes" alt=" " >01000000</a>  &nbsp;&nbsp;version
 
 <a title="The number of input(s)/UTXO(s)" alt="">01 
-</a> &nbsp;&nbsp;inputcount
+</a> &nbsp;&nbsp;是输入数量inputcount
 
-<a title="Previous transaction output hash, in Little-Endian. This can be found in the transaction input (txid) " alt="">b4686d6187217f8983c9ce8afea8876127608c0c2508bdbee1699e0e5be35b79</a> &nbsp;&nbsp;txid
+<a title="Previous transaction output hash, in Little-Endian. This can be found in the transaction input (txid) " alt="">b4686d6187217f8983c9ce8afea8876127608c0c2508bdbee1699e0e5be35b79</a> &nbsp;&nbsp;是txid的hash值
 
 <a title="Output index output_no of the previous transaction in Little-Endian format." alt="">01000000</a>&nbsp;&nbsp;vout
 
@@ -271,30 +271,31 @@ ps：节点需要共享两类交易：新鲜交易（即最近进入网络的交
 <a title="Sequence number, disabled for this transaction. However if non-zero locktime is used, then at least one input must have a seq number below 0xffffffff" alt="">ffffffff</a>&nbsp;&nbsp;sequence
 
 
-<a title="Number of outputs followed in HEX" alt="">02</a>&nbsp;&nbsp;outputcount
+<a title="Number of outputs followed in HEX" alt="">02</a>&nbsp;&nbsp;是输出数量outputcount
 
-<a title="Value to be transferred in Satoshi(my destination address)" alt="">80778e0600000000</a>&nbsp;&nbsp;amount
+<a title="Value to be transferred in Satoshi(my destination address)" alt="">80778e0600000000</a>&nbsp;&nbsp;是接收方地址的比特币金额amount（单位是聪）
 
 <a title="Size (in bytes) of the Locking Script (in this case, P2PKH) which follows. This is also in HEX." alt="">19</a>&nbsp;&nbsp;locksize
-<a  title="OP_DUP,part of the scriptPubKey/Locking Script" alt=" ">76
-</a>&nbsp;&nbsp;OP_DUP
 
-<a title="OP_HASH160,part of the scriptPubKey/Locking Script" alt="">a9</a>&nbsp;&nbsp;OP_HASH160
+<a  title="OP_DUP,part of the scriptPubKey/Locking Script" alt=" ">76
+</a>&nbsp;&nbsp;是OP_DUP操作符的16进制编码
+
+<a title="OP_HASH160,part of the scriptPubKey/Locking Script" alt="">a9</a>&nbsp;&nbsp;是OP_HASH160操作码的16进制编码
 
 <a title="PUSHDATA 14 - Size (in Bytes) to push to stack, part of the scriptPubKey/Locking Script. This is also in HEX." alt="">14</a>
 
-<a title="Hash of the Destination Public Key" alt="">caaef32e64b2d6465d90a1c9af497066630992a7</a>&nbsp;&nbsp;pubKey
+<a title="Hash of the Destination Public Key" alt="">caaef32e64b2d6465d90a1c9af497066630992a7</a>&nbsp;&nbsp;是pubKey的16进制编码
 
-<a title="OP_EQUALVERIFY, part of the scriptPubKey/Locking Script." alt="" >88</a>&nbsp;&nbsp;OP_EQUALVERIFY
+<a title="OP_EQUALVERIFY, part of the scriptPubKey/Locking Script." alt="" >88</a>&nbsp;&nbsp;是OP_EQUALVERIFY操作符的16进制编码
 
-<a title="OP_CHECKSIG, part of the scriptPubKey/Locking Script." alt="">ac</a>&nbsp;&nbsp;OP_CHECKSIG
+<a title="OP_CHECKSIG, part of the scriptPubKey/Locking Script." alt="">ac</a>&nbsp;&nbsp;是OP_CHECKSIG操作符的16进制编码
 
 
-<a title="Value to be transferred in Satoshi(change address), in Little-Endian." alt="">8c3ffc3d00000000</a>
+<a title="Value to be transferred in Satoshi(change address), in Little-Endian." alt="">8c3ffc3d00000000</a>&nbsp;&nbsp;是找零地址的比特币（单位为聪）
 
 <a title="Size (in bytes) of the Locking Script (in this case, P2PKH) which follows. This is also in HEX." alt="">19</a>&nbsp;&nbsp;locksize
 
-<a title="the whole scriptPubkey" alt="">76a914e091249ce2d5f43ebcafda20bfc71b3fb15763cd88ac</a>&nbsp;&nbsp;scriptPubKey
+<a title="the whole scriptPubkey" alt="">76a914e091249ce2d5f43ebcafda20bfc71b3fb15763cd88ac</a>&nbsp;&nbsp;是scriptPubKey的16进制编码
 
 <a title="nLockTime, can be either UNIX time or Block Height depending on usage. Before this time, the transaction cannot be accepted into a block. In this example, nLockTime is 0, meaning that there is no nLockTime specified and thus the transaction is executed immediately.">00000000</a>&nbsp;&nbsp;Locktime
 </body>
@@ -321,7 +322,8 @@ ps：节点需要共享两类交易：新鲜交易（即最近进入网络的交
 
 	
 
-	signature
+	signature（对交易的Hash值进行ECDSA签名）
+	pubkey(公钥)
 
 	
 
@@ -537,7 +539,9 @@ Previous Block ID		23字节
 
 ##私钥、公钥、地址
 
-**钱包**生成私钥->私钥生成公钥->公钥生成哈希->公钥哈希生成地址->地址用来接收比特币。
+**钱包**生成私钥()->私钥生成公钥->公钥生成哈希->公钥哈希生成地址->地址用来接收比特币。
+
+ps:操作系统提供的随机数生成器（路径在哪里？Linux下有两个特殊设备文件/dev/random和/de/urandom，用于生成随机数。）——》随机数—SHA256—》私钥Sk（256bits）—ECC（Pk=Sk*G）—》公钥Pk（x，y），公钥是椭圆曲线上的一个点，由一对坐标(x,y)构成——》地址.
 
 ps：注意是钱包帮你生成私钥。不是书上讲的自己选一串256bit的随机数。那个是为了讲原理。**钱包的核心就是私钥的保存与使用。**
 
