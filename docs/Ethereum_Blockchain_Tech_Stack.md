@@ -1,7 +1,7 @@
 #以太坊技术路线图
 以太坊技术路线图首次批露于2015年3月，主要包括四个发布阶段
 
-##Frontier（前沿）‘
+##Frontier（前沿）
 
 2015年7月30日，Frontier的创始区块产生。Frontier是以太坊的第一版，提供了基本的命令行功能，用户可以开采以太币以及上传并执行合约。
 
@@ -25,6 +25,15 @@
 ###区块时间
 
 ##共识机制
+
+PoW(Ethash)
+
+PoA(Clique)
+
+PoS(TOodo)
+
+##P2P协议
+Kad
 
 ###交易验证器（transaction validators）
 
@@ -67,9 +76,11 @@ EVM是一个隔离的轻量级虚拟机环境，运行在其中的智能合约�
 ###Gas
 GasPrice
 
-GasLimit
+GasLimit(or StartGas)
 
 GasFees
+
+GasUsed
 
 ###图灵完备
 
