@@ -1,0 +1,247 @@
+root@tendermint-node2:~/tmdata/config# tendermint --home ~/tmdata  --consensus.create_empty_blocks=true node --proxy_app=kvstore
+I[05-08|08:56:56.747] Starting multiAppConn                        module=proxy impl=multiAppConn
+I[05-08|08:56:56.747] Starting localClient                         module=abci-client connection=query impl=localClient
+I[05-08|08:56:56.747] Starting localClient                         module=abci-client connection=mempool impl=localClient
+I[05-08|08:56:56.747] Starting localClient                         module=abci-client connection=consensus impl=localClient
+I[05-08|08:56:56.747] ABCI Handshake                               module=consensus appHeight=0 appHash=
+I[05-08|08:56:56.747] ABCI Replay Blocks                           module=consensus appHeight=0 storeHeight=39 stateHeight=39
+I[05-08|08:56:56.747] Applying block                               module=consensus height=1
+I[05-08|08:56:56.747] Executed block                               module=consensus height=1 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.747] Applying block                               module=consensus height=2
+I[05-08|08:56:56.747] Executed block                               module=consensus height=2 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.747] Applying block                               module=consensus height=3
+I[05-08|08:56:56.748] Executed block                               module=consensus height=3 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.748] Applying block                               module=consensus height=4
+I[05-08|08:56:56.748] Executed block                               module=consensus height=4 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.748] Applying block                               module=consensus height=5
+I[05-08|08:56:56.748] Executed block                               module=consensus height=5 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.748] Applying block                               module=consensus height=6
+I[05-08|08:56:56.748] Executed block                               module=consensus height=6 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.748] Applying block                               module=consensus height=7
+I[05-08|08:56:56.748] Executed block                               module=consensus height=7 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.748] Applying block                               module=consensus height=8
+I[05-08|08:56:56.748] Executed block                               module=consensus height=8 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.748] Applying block                               module=consensus height=9
+I[05-08|08:56:56.749] Executed block                               module=consensus height=9 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.749] Applying block                               module=consensus height=10
+I[05-08|08:56:56.749] Executed block                               module=consensus height=10 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.749] Applying block                               module=consensus height=11
+I[05-08|08:56:56.749] Executed block                               module=consensus height=11 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.749] Applying block                               module=consensus height=12
+I[05-08|08:56:56.749] Executed block                               module=consensus height=12 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.749] Applying block                               module=consensus height=13
+I[05-08|08:56:56.749] Executed block                               module=consensus height=13 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.749] Applying block                               module=consensus height=14
+I[05-08|08:56:56.749] Executed block                               module=consensus height=14 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.749] Applying block                               module=consensus height=15
+I[05-08|08:56:56.749] Executed block                               module=consensus height=15 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.749] Applying block                               module=consensus height=16
+I[05-08|08:56:56.750] Executed block                               module=consensus height=16 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.750] Applying block                               module=consensus height=17
+I[05-08|08:56:56.750] Executed block                               module=consensus height=17 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.750] Applying block                               module=consensus height=18
+I[05-08|08:56:56.750] Executed block                               module=consensus height=18 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.750] Applying block                               module=consensus height=19
+I[05-08|08:56:56.750] Executed block                               module=consensus height=19 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.750] Applying block                               module=consensus height=20
+I[05-08|08:56:56.750] Executed block                               module=consensus height=20 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.750] Applying block                               module=consensus height=21
+I[05-08|08:56:56.750] Executed block                               module=consensus height=21 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.750] Applying block                               module=consensus height=22
+I[05-08|08:56:56.750] Executed block                               module=consensus height=22 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.750] Applying block                               module=consensus height=23
+I[05-08|08:56:56.751] Executed block                               module=consensus height=23 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.751] Applying block                               module=consensus height=24
+I[05-08|08:56:56.751] Executed block                               module=consensus height=24 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.751] Applying block                               module=consensus height=25
+I[05-08|08:56:56.751] Executed block                               module=consensus height=25 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.751] Applying block                               module=consensus height=26
+I[05-08|08:56:56.751] Executed block                               module=consensus height=26 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.751] Applying block                               module=consensus height=27
+I[05-08|08:56:56.751] Executed block                               module=consensus height=27 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.751] Applying block                               module=consensus height=28
+I[05-08|08:56:56.751] Executed block                               module=consensus height=28 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.751] Applying block                               module=consensus height=29
+I[05-08|08:56:56.751] Executed block                               module=consensus height=29 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.752] Applying block                               module=consensus height=30
+I[05-08|08:56:56.752] Executed block                               module=consensus height=30 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.752] Applying block                               module=consensus height=31
+I[05-08|08:56:56.752] Executed block                               module=consensus height=31 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.752] Applying block                               module=consensus height=32
+I[05-08|08:56:56.752] Executed block                               module=consensus height=32 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.752] Applying block                               module=consensus height=33
+I[05-08|08:56:56.752] Executed block                               module=consensus height=33 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.752] Applying block                               module=consensus height=34
+I[05-08|08:56:56.752] Executed block                               module=consensus height=34 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.752] Applying block                               module=consensus height=35
+I[05-08|08:56:56.752] Executed block                               module=consensus height=35 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.752] Applying block                               module=consensus height=36
+I[05-08|08:56:56.753] Executed block                               module=consensus height=36 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.753] Applying block                               module=consensus height=37
+I[05-08|08:56:56.753] Executed block                               module=consensus height=37 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.753] Applying block                               module=consensus height=38
+I[05-08|08:56:56.753] Executed block                               module=consensus height=38 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.753] Applying block                               module=consensus height=39
+I[05-08|08:56:56.753] Executed block                               module=consensus height=39 validTxs=0 invalidTxs=0
+I[05-08|08:56:56.753] Completed ABCI Handshake - Tendermint and App are synced module=consensus appHeight=0 appHash=
+I[05-08|08:56:56.753] This node is a validator                     module=consensus addr=5948424E0369980B87246D4F17FAB221240BC569 pubKey=PubKeyEd25519{536C317E987316F62CF644BA4615CA49C48720273712ECA34DC9FD87AE7105A2}
+I[05-08|08:56:56.777] Starting Node                                module=main impl=Node
+I[05-08|08:56:56.777] Starting EventBus                            module=events impl=EventBus
+I[05-08|08:56:56.778] Starting RPC HTTP server on tcp://0.0.0.0:46657 module=rpc-server 
+I[05-08|08:56:56.778] Local listener                               module=p2p ip=:: port=46656
+I[05-08|08:56:56.778] Getting UPNP external address                module=p2p 
+I[05-08|08:56:59.778] Could not perform UPNP discover              module=p2p err="read udp4 0.0.0.0:16408: i/o timeout"
+I[05-08|08:56:59.778] Starting DefaultListener                     module=p2p impl=Listener(@10.10.5.203:46656)
+I[05-08|08:56:59.778] P2P Node ID                                  module=main ID=df8be27e5d6b7f4e774224f4815ce12418497b18 file=/root/tmdata/config/node_key.json
+I[05-08|08:56:59.778] Add our address to book                      module=p2p book=/root/tmdata/config/addrbook.json addr=df8be27e5d6b7f4e774224f4815ce12418497b18@10.10.5.203:46656
+I[05-08|08:56:59.778] Starting P2P Switch                          module=p2p impl="P2P Switch"
+I[05-08|08:56:59.778] Starting MempoolReactor                      module=mempool impl=MempoolReactor
+I[05-08|08:56:59.778] Starting BlockchainReactor                   module=blockchain impl=BlockchainReactor
+I[05-08|08:56:59.778] Starting BlockPool                           module=blockchain impl=BlockPool
+I[05-08|08:56:59.779] Starting ConsensusReactor                    module=consensus impl=ConsensusReactor
+I[05-08|08:56:59.779] ConsensusReactor                             module=consensus fastSync=true
+I[05-08|08:56:59.779] Starting EvidenceReactor                     module=evidence impl=EvidenceReactor
+I[05-08|08:56:59.779] Starting PEXReactor                          module=p2p impl=PEXReactor
+I[05-08|08:56:59.779] Starting AddrBook                            module=p2p book=/root/tmdata/config/addrbook.json impl=AddrBook
+I[05-08|08:56:59.779] Started node                                 module=main nodeInfo="NodeInfo{id: df8be27e5d6b7f4e774224f4815ce12418497b18, moniker: tendermint-node2, network: test-chain-c39DtV [listen 10.10.5.203:46656], version: 0.19.0 ([amino_version=0.9.6 p2p_version=0.5.0 consensus_version=v1/0.2.2 rpc_version=0.7.0/3 tx_index=on rpc_addr=tcp://0.0.0.0:46657])}"
+I[05-08|08:56:59.779] Ensure peers                                 module=p2p numOutPeers=0 numInPeers=0 numDialing=0 numToDial=10
+I[05-08|08:56:59.779] Will dial address                            module=p2p addr=252626a28739100229361aa04bb8c0c305d0cbb3@47.75.50.204:46656
+I[05-08|08:56:59.780] Dialing peer                                 module=p2p address=252626a28739100229361aa04bb8c0c305d0cbb3@47.75.50.204:46656
+E[05-08|08:56:59.783] Failed to dial peer                          module=p2p address=252626a28739100229361aa04bb8c0c305d0cbb3@47.75.50.204:46656 err="Error{`Error creating peer` (cause: dial tcp 47.75.50.204:46656: getsockopt: connection refused)}"
+E[05-08|08:56:59.783] Dialing failed                               module=p2p addr=252626a28739100229361aa04bb8c0c305d0cbb3@47.75.50.204:46656 err="Error{`Error creating peer` (cause: dial tcp 47.75.50.204:46656: getsockopt: connection refused)}" attempts=0
+I[05-08|08:57:14.170] Successful handshake with peer               module=p2p peer=47.75.50.204:8002 peerNodeInfo="NodeInfo{id: 252626a28739100229361aa04bb8c0c305d0cbb3, moniker: hk012-data-ethermint-test3, network: test-chain-c39DtV [listen 10.10.5.202:46656], version: 0.19.0 ([amino_version=0.9.6 p2p_version=0.5.0 consensus_version=v1/0.2.2 rpc_version=0.7.0/3 tx_index=on rpc_addr=tcp://0.0.0.0:46657])}"
+I[05-08|08:57:14.170] Starting Peer                                module=p2p peer=47.75.50.204:8002 impl="Peer{MConn{47.75.50.204:8002} 252626a28739100229361aa04bb8c0c305d0cbb3 in}"
+I[05-08|08:57:14.170] Starting MConnection                         module=p2p peer=47.75.50.204:8002 impl=MConn{47.75.50.204:8002}
+E[05-08|08:57:14.170] Failed to add new address                    module=p2p err="Cannot add non-routable address 252626a28739100229361aa04bb8c0c305d0cbb3@10.10.5.202:46656"
+I[05-08|08:57:14.170] Added peer                                   module=p2p peer="Peer{MConn{47.75.50.204:8002} 252626a28739100229361aa04bb8c0c305d0cbb3 in}"
+I[05-08|08:57:14.779] Time to switch to consensus reactor!         module=blockchain height=40
+I[05-08|08:57:14.779] Stopping BlockPool                           module=blockchain impl=BlockPool
+I[05-08|08:57:14.779] SwitchToConsensus                            module=consensus 
+I[05-08|08:57:14.780] Ignoring updateToState()                     module=consensus newHeight=40 oldHeight=40
+I[05-08|08:57:14.780] Starting ConsensusState                      module=consensus impl=ConsensusState
+I[05-08|08:57:14.780] Starting baseWAL                             module=consensus wal=/root/tmdata/data/cs.wal/wal impl=baseWAL
+I[05-08|08:57:14.780] Starting TimeoutTicker                       module=consensus impl=TimeoutTicker
+I[05-08|08:57:14.787] Catchup by replaying consensus messages      module=consensus height=40
+I[05-08|08:57:14.787] Replay: New Step                             module=consensus height=40 round=0 step=RoundStepNewHeight
+I[05-08|08:57:14.787] Replay: Vote                                 module=consensus height=39 round=0 type=2 blockID=432438F4F749EEA761DEEB295310E4BAEEF119C5:1:55533247CE47 peer=252626a28739100229361aa04bb8c0c305d0cbb3
+I[05-08|08:57:14.787] Replay: Timeout                              module=consensus height=40 round=0 step=RoundStepNewHeight dur=979.592484ms
+I[05-08|08:57:14.787] enterNewRound(40/0). Current: 40/0/RoundStepNewHeight module=consensus 
+I[05-08|08:57:14.787] enterPropose(40/0). Current: 40/0/RoundStepNewRound module=consensus 
+I[05-08|08:57:14.787] enterPropose: Not our turn to propose        module=consensus proposer=7A494CED7A75A3F045F4FABE52280A16DED5A65D privValidator="PrivValidator{5948424E0369980B87246D4F17FAB221240BC569 LH:39, LR:0, LS:3}"
+I[05-08|08:57:14.790] Replay: New Step                             module=consensus height=40 round=0 step=RoundStepPropose
+I[05-08|08:57:14.790] Replay: New Step                             module=consensus height=40 round=0 step=RoundStepPropose
+I[05-08|08:57:14.790] Replay: Done                                 module=consensus 
+I[05-08|08:57:15.379] Received complete proposal block             module=consensus height=40 hash=474341837FEDD18F010BD0BA927C13B3C28DCFB0
+I[05-08|08:57:15.380] enterPrevote(40/0). Current: 40/0/RoundStepPropose module=consensus 
+I[05-08|08:57:15.380] enterPrevote: ProposalBlock is valid         module=consensus height=40 round=0
+I[05-08|08:57:15.384] Signed and pushed vote                       module=consensus height=40 round=0 vote="Vote{0:5948424E0369 40/00/1(Prevote) 474341837FED /7B2460E8A08B.../ @ 2018-05-08T08:57:15.380Z}" err=null
+I[05-08|08:57:15.389] Added to prevote                             module=consensus vote="Vote{0:5948424E0369 40/00/1(Prevote) 474341837FED /7B2460E8A08B.../ @ 2018-05-08T08:57:15.380Z}" prevotes="VoteSet{H:40 R:0 T:1 +2/3:<nil> BA{2:x_} map[]}"
+I[05-08|08:57:15.392] Added to prevote                             module=consensus vote="Vote{1:7A494CED7A75 40/00/1(Prevote) 474341837FED /5360C025D1D6.../ @ 2018-05-08T08:57:15.179Z}" prevotes="VoteSet{H:40 R:0 T:1 +2/3:474341837FEDD18F010BD0BA927C13B3C28DCFB0:1:017707DF102D BA{2:xx} map[]}"
+I[05-08|08:57:15.392] enterPrecommit(40/0). Current: 40/0/RoundStepPrevote module=consensus 
+I[05-08|08:57:15.392] enterPrecommit: +2/3 prevoted proposal block. Locking module=consensus hash=474341837FEDD18F010BD0BA927C13B3C28DCFB0
+I[05-08|08:57:15.395] Signed and pushed vote                       module=consensus height=40 round=0 vote="Vote{0:5948424E0369 40/00/2(Precommit) 474341837FED /EC9D3DC22385.../ @ 2018-05-08T08:57:15.392Z}" err=null
+I[05-08|08:57:15.402] Added to precommit                           module=consensus vote="Vote{0:5948424E0369 40/00/2(Precommit) 474341837FED /EC9D3DC22385.../ @ 2018-05-08T08:57:15.392Z}" precommits="VoteSet{H:40 R:0 T:2 +2/3:<nil> BA{2:x_} map[]}"
+I[05-08|08:57:15.596] Added to precommit                           module=consensus vote="Vote{1:7A494CED7A75 40/00/2(Precommit) 474341837FED /A0A32C1668EE.../ @ 2018-05-08T08:57:15.493Z}" precommits="VoteSet{H:40 R:0 T:2 +2/3:474341837FEDD18F010BD0BA927C13B3C28DCFB0:1:017707DF102D BA{2:xx} map[]}"
+I[05-08|08:57:15.596] enterCommit(40/0). Current: 40/0/RoundStepPrecommit module=consensus 
+I[05-08|08:57:15.600] Finalizing commit of block with 0 txs        module=consensus height=40 hash=474341837FEDD18F010BD0BA927C13B3C28DCFB0 root=0000000000000000
+I[05-08|08:57:15.600] Block{
+  Header{
+    ChainID:        test-chain-c39DtV
+    Height:         40
+    Time:           2018-05-08 08:57:15.167316692 +0000 UTC
+    NumTxs:         0
+    TotalTxs:       0
+    LastBlockID:    432438F4F749EEA761DEEB295310E4BAEEF119C5:1:55533247CE47
+    LastCommit:     E53529AC3D4B6ADBC9A8AF99C74AB8E28DC216E0
+    Data:           
+    Validators:     0C6826C9E3144741477E258F501A34120642C687
+    App:            0000000000000000
+    Consensus:       F66EF1DF8BA6DAC7A1ECCE40CC84E54A1CEBC6A5
+    Results:        
+    Evidence:       
+  }#474341837FEDD18F010BD0BA927C13B3C28DCFB0
+  Data{
+    
+  }#
+  Data{
+    
+  }#
+  Commit{
+    BlockID:    432438F4F749EEA761DEEB295310E4BAEEF119C5:1:55533247CE47
+    Precommits: Vote{0:5948424E0369 39/00/2(Precommit) 432438F4F749 /36AF2BED9A5C.../ @ 2018-05-08T08:55:08.598Z}
+    Vote{1:7A494CED7A75 39/00/2(Precommit) 432438F4F749 /2FABDF0FE30F.../ @ 2018-05-08T08:55:08.497Z}
+  }#E53529AC3D4B6ADBC9A8AF99C74AB8E28DC216E0
+}#474341837FEDD18F010BD0BA927C13B3C28DCFB0 module=consensus 
+I[05-08|08:57:15.607] Executed block                               module=state height=40 validTxs=0 invalidTxs=0
+I[05-08|08:57:15.609] Committed state                              module=state height=40 txs=0 appHash=0000000000000000
+I[05-08|08:57:15.609] Recheck txs                                  module=mempool numtxs=0 height=40
+I[05-08|08:57:16.597] Timed out                                    module=consensus dur=977.220279ms height=41 round=0 step=RoundStepNewHeight
+I[05-08|08:57:16.599] enterNewRound(41/0). Current: 41/0/RoundStepNewHeight module=consensus 
+I[05-08|08:57:16.599] enterPropose(41/0). Current: 41/0/RoundStepNewRound module=consensus 
+I[05-08|08:57:16.599] enterPropose: Our turn to propose            module=consensus proposer=5948424E0369980B87246D4F17FAB221240BC569 privValidator="PrivValidator{5948424E0369980B87246D4F17FAB221240BC569 LH:40, LR:0, LS:3}"
+I[05-08|08:57:16.603] Signed proposal                              module=consensus height=41 round=0 proposal="Proposal{41/0 1:3BDFE630E992 (-1,:0:000000000000) /E43111D98595.../ @ 2018-05-08T08:57:16.600Z}"
+I[05-08|08:57:16.610] Received complete proposal block             module=consensus height=41 hash=30389EFBA291AC4A3C2228F297F9D4F5C01FDCB3
+I[05-08|08:57:16.610] enterPrevote(41/0). Current: 41/0/RoundStepPropose module=consensus 
+I[05-08|08:57:16.611] enterPrevote: ProposalBlock is valid         module=consensus height=41 round=0
+I[05-08|08:57:16.614] Signed and pushed vote                       module=consensus height=41 round=0 vote="Vote{0:5948424E0369 41/00/1(Prevote) 30389EFBA291 /A1788C65EAA5.../ @ 2018-05-08T08:57:16.611Z}" err=null
+I[05-08|08:57:16.618] Added to prevote                             module=consensus vote="Vote{0:5948424E0369 41/00/1(Prevote) 30389EFBA291 /A1788C65EAA5.../ @ 2018-05-08T08:57:16.611Z}" prevotes="VoteSet{H:41 R:0 T:1 +2/3:<nil> BA{2:x_} map[]}"
+I[05-08|08:57:16.823] Added to prevote                             module=consensus vote="Vote{1:7A494CED7A75 41/00/1(Prevote) 30389EFBA291 /691F09299DB5.../ @ 2018-05-08T08:57:16.714Z}" prevotes="VoteSet{H:41 R:0 T:1 +2/3:30389EFBA291AC4A3C2228F297F9D4F5C01FDCB3:1:3BDFE630E992 BA{2:xx} map[]}"
+I[05-08|08:57:16.823] enterPrecommit(41/0). Current: 41/0/RoundStepPrevote module=consensus 
+I[05-08|08:57:16.823] enterPrecommit: +2/3 prevoted proposal block. Locking module=consensus hash=30389EFBA291AC4A3C2228F297F9D4F5C01FDCB3
+I[05-08|08:57:16.826] Signed and pushed vote                       module=consensus height=41 round=0 vote="Vote{0:5948424E0369 41/00/2(Precommit) 30389EFBA291 /452D5BF8F252.../ @ 2018-05-08T08:57:16.824Z}" err=null
+I[05-08|08:57:16.831] Added to precommit                           module=consensus vote="Vote{1:7A494CED7A75 41/00/2(Precommit) 30389EFBA291 /D5A52B2482F1.../ @ 2018-05-08T08:57:16.728Z}" precommits="VoteSet{H:41 R:0 T:2 +2/3:<nil> BA{2:_x} map[]}"
+I[05-08|08:57:16.833] Added to precommit                           module=consensus vote="Vote{0:5948424E0369 41/00/2(Precommit) 30389EFBA291 /452D5BF8F252.../ @ 2018-05-08T08:57:16.824Z}" precommits="VoteSet{H:41 R:0 T:2 +2/3:30389EFBA291AC4A3C2228F297F9D4F5C01FDCB3:1:3BDFE630E992 BA{2:xx} map[]}"
+I[05-08|08:57:16.833] enterCommit(41/0). Current: 41/0/RoundStepPrecommit module=consensus 
+I[05-08|08:57:16.836] Finalizing commit of block with 0 txs        module=consensus height=41 hash=30389EFBA291AC4A3C2228F297F9D4F5C01FDCB3 root=0000000000000000
+I[05-08|08:57:16.836] Block{
+  Header{
+    ChainID:        test-chain-c39DtV
+    Height:         41
+    Time:           2018-05-08 08:57:16.5998901 +0000 UTC
+    NumTxs:         0
+    TotalTxs:       0
+    LastBlockID:    474341837FEDD18F010BD0BA927C13B3C28DCFB0:1:017707DF102D
+    LastCommit:     C731BB0184FB5250EDB21929D00F1B21236BF298
+    Data:           
+    Validators:     0C6826C9E3144741477E258F501A34120642C687
+    App:            0000000000000000
+    Consensus:       F66EF1DF8BA6DAC7A1ECCE40CC84E54A1CEBC6A5
+    Results:        
+    Evidence:       
+  }#30389EFBA291AC4A3C2228F297F9D4F5C01FDCB3
+  Data{
+    
+  }#
+  Data{
+    
+  }#
+  Commit{
+    BlockID:    474341837FEDD18F010BD0BA927C13B3C28DCFB0:1:017707DF102D
+    Precommits: Vote{0:5948424E0369 40/00/2(Precommit) 474341837FED /EC9D3DC22385.../ @ 2018-05-08T08:57:15.392Z}
+    Vote{1:7A494CED7A75 40/00/2(Precommit) 474341837FED /A0A32C1668EE.../ @ 2018-05-08T08:57:15.493Z}
+  }#C731BB0184FB5250EDB21929D00F1B21236BF298
+}#30389EFBA291AC4A3C2228F297F9D4F5C01FDCB3 module=consensus 
+I[05-08|08:57:16.844] Executed block                               module=state height=41 validTxs=0 invalidTxs=0
+I[05-08|08:57:16.847] Committed state                              module=state height=41 txs=0 appHash=0000000000000000
+I[05-08|08:57:16.847] Recheck txs                                  module=mempool numtxs=0 height=41
+^Ccaptured interrupt, exiting...
+I[05-08|08:57:16.898] Stopping Node                                module=main impl=Node
+I[05-08|08:57:16.898] Stopping Node                                module=main 
+I[05-08|08:57:16.898] Stopping P2P Switch                          module=p2p impl="P2P Switch"
+I[05-08|08:57:16.898] Stopping DefaultListener                     module=p2p impl=Listener(@10.10.5.203:46656)
+I[05-08|08:57:16.898] Stopping Peer                                module=p2p peer=47.75.50.204:8002 impl="Peer{MConn{47.75.50.204:8002} 252626a28739100229361aa04bb8c0c305d0cbb3 in}"
+I[05-08|08:57:16.899] Stopping MConnection                         module=p2p peer=47.75.50.204:8002 impl=MConn{47.75.50.204:8002}
+I[05-08|08:57:16.899] Stopping BlockchainReactor                   module=blockchain impl=BlockchainReactor
+I[05-08|08:57:16.899] Stopping ConsensusReactor                    module=consensus impl=ConsensusReactor
+I[05-08|08:57:16.899] Stopping ConsensusState                      module=consensus impl=ConsensusState
+I[05-08|08:57:16.899] Stopping TimeoutTicker                       module=consensus impl=TimeoutTicker
+I[05-08|08:57:16.899] Stopping EvidenceReactor                     module=evidence impl=EvidenceReactor
+I[05-08|08:57:16.899] Stopping PEXReactor                          module=p2p impl=PEXReactor
+I[05-08|08:57:16.899] Stopping AddrBook                            module=p2p book=/root/tmdata/config/addrbook.json impl=AddrBook
+I[05-08|08:57:16.899] Stopping MempoolReactor                      module=mempool impl=MempoolReactor
+I[05-08|08:57:16.899] Closing rpc listener                         module=main listener=&{fd:0xc42090cc00}
+I[05-08|08:57:16.899] Stopping EventBus                            module=events impl=EventBus
+root@tendermint-node2:~/tmdata/config# ls
+addrbook.json  config.toml  genesis.json  node_key.json  priv_validator.json
+root@tendermint-node2:~/tmdata/config# cat priv_validator.json 
+{"address":"5948424E0369980B87246D4F17FAB221240BC569","pub_key":{"type":"AC26791624DE60","value":"U2wxfphzFvYs9kS6RhXKScSHICc3EuyjTcn9h65xBaI="},"last_height":41,"last_round":0,"last_step":3,"last_signature":{"type":"6BF5903DA1DB28","value":"RS1b+PJS+FH5vubXtNhh1ZgwmlQKJWC4130QxYXYauKOWO644TqUIU0/uC8dpf9A8Bj5HHaOxQmC3L3ARjkvCA=="},"last_signbytes":"7B2240636861696E5F6964223A22746573742D636861696E2D633339447456222C224074797065223A22766F7465222C22626C6F636B5F
