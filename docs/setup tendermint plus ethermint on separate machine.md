@@ -82,7 +82,11 @@ vim config.toml
 
 ## 关闭ethermint和tendermint
 
-关闭的时候比较讲究，需要先停掉ethermint，再停掉ethermint。
+关闭的时候比较讲究，需要先停掉ethermint，再停掉ethermint。否则，重启tendermint会crash。
+
+## 再启动ethermint和tendermint
+
+首先启动tendermint，再次启动ethermint。否则，tendermint程序会crash。
 
 
 ## 注意事项
