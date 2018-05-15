@@ -3,7 +3,7 @@
 ## 克隆代码
 
     #mkdir -p $GOPATH/src/github.com/cosmos && cd $GOPATH/src/github.com/cosmos    
-    #git clone -b v0.15.0 https://github.com/cosmos/cosmos-sdk &
+    #git clone -b v0.15.0 https://github.com/cosmos/cosmos-sdk 
 我们克隆v0.15.0的代码进行编译。v0.15.0的代码依赖tendermint v0.19.0。这一点我们可以在Gopkg.toml中找到依据。
 
 ##  编译安装
@@ -89,13 +89,20 @@ so far，gaiad和gaiacli及四个例子（分别是basecoind，basecli，democoi
 
 ### 初始化节点
     
-    gaiad init  --home=$HOME/.gaiad1
-    gaiad init  --home=$HOME/.gaiad2
-    cp $HOME/.gaiad1/genesis.json $HOME/.gaiad2/genesis.json   //共享一个genesis.json
-
-    #gaiacli status --node="tcp://localhost:46657"
+    # gaiad init  --home=$HOME/.gaiad1
+    
+    # cd $HOME/.gaiad1 && tree
+    |-- config
+    |   |-- config.toml
+    |   |-- genesis.json
+    |   |-- node_key.json
+    |   `-- priv_validator.json
+    `-- data
+    # gaiad init  --home=$HOME/.gaiad2    #独立的数据目录
+    # cp $HOME/.gaiad1/config/genesis.json $HOME/.gaiad2/config/genesis.json   //共享一个genesis.json
     
 修改节点2的配置文件
+    
     # This is a TOML config file.
     # For more information, see https://github.com/toml-lang/toml
     
@@ -140,17 +147,15 @@ so far，gaiad和gaiacli及四个例子（分别是basecoind，basecli，democoi
     
     # Comma separated list of seed nodes to connect to
     #seeds = ""
-    seeds="81c8c6b270e86bcfa27a270906feb90f72838cfa@0.0.0.0:46656"   #这个地方的格式是ID@IP:port,新版本的tendermint采用这种形式
-    
-    # Comma separated list of nodes to keep persistent connections to
-    # Do not add private peers to this list if you don't want them advertised
-    persistent_peers = ""
+    seeds="81c8c6b270e86bcfa27a270906feb90f72838cfa@0.0.0.0:46656"   #这个地方的格式是ID@IP:port,新版本的tendermint采用这种形式，其中ID可以用gaiad show_node_id --home=$HOME/.gaiad1获得
 若在多台机器上分别启node，就不用修改这里！
     
 ### 启动node   
 
     gaia start --home=$HOME/.gaia1
-    gaia start --home=$HOME/.gaia2
+    gaia start --home=$HOME/.gaia2    #新开一个终端
+
+### 一些操作
 
 查询账户
 
@@ -219,3 +224,7 @@ so far，gaiad和gaiacli及四个例子（分别是basecoind，basecli，democoi
     }
     
     pk和address一致！
+    
+## 总结
+
+本文从0开始完成了安装cosmos sdk，再搭建两个节点的测试网。
