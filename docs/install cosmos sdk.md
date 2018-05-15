@@ -85,4 +85,137 @@ so far，gaiad和gaiacli及四个例子（分别是basecoind，basecli，democoi
     
     Use "gaiacli [command] --help" for more information about a command.
     
-## 搭建测试网
+## 搭建测试网（1个validator+1个非validator）
+
+### 初始化节点
+    
+    gaiad init  --home=$HOME/.gaiad1
+    gaiad init  --home=$HOME/.gaiad2
+    cp $HOME/.gaiad1/genesis.json $HOME/.gaiad2/genesis.json   //共享一个genesis.json
+
+    #gaiacli status --node="tcp://localhost:46657"
+    
+修改节点2的配置文件
+    # This is a TOML config file.
+    # For more information, see https://github.com/toml-lang/toml
+    
+    ##### main base config options #####
+    
+    # TCP or UNIX socket address of the ABCI application,
+    # or the name of an ABCI application compiled in with the Tendermint binary
+    #proxy_app = "tcp://127.0.0.1:46658"
+    proxy_app = "tcp://127.0.0.1:46668"
+    
+    # A custom human readable name for this node
+    moniker = "gaiad2"
+    
+    # If this node is many blocks behind the tip of the chain, FastSync
+    # allows them to catchup quickly by downloading blocks in parallel
+    # and verifying their commits
+    fast_sync = true
+    
+    # Database backend: leveldb | memdb
+    db_backend = "leveldb"
+    
+    # Database directory
+    db_path = "data"
+    
+    # Output level for logging, including package level options
+    log_level = "main:info,state:info,*:error"
+    
+   
+    [rpc]
+    
+    # TCP or UNIX socket address for the RPC server to listen on
+    #laddr = "tcp://0.0.0.0:46657"
+    laddr="tcp://0.0.0.0:46667"      #同一台机器上启多个进程，会报端口占用
+    
+   
+    ##### peer to peer configuration options #####
+    [p2p]
+    
+    # Address to listen for incoming connections
+    #laddr = "tcp://0.0.0.0:46656"
+    laddr="tcp://0.0.0.0:46666"       #同上
+    
+    # Comma separated list of seed nodes to connect to
+    #seeds = ""
+    seeds="81c8c6b270e86bcfa27a270906feb90f72838cfa@0.0.0.0:46656"   #这个地方的格式是ID@IP:port,新版本的tendermint采用这种形式
+    
+    # Comma separated list of nodes to keep persistent connections to
+    # Do not add private peers to this list if you don't want them advertised
+    persistent_peers = ""
+若在多台机器上分别启node，就不用修改这里！
+    
+### 启动node   
+
+    gaia start --home=$HOME/.gaia1
+    gaia start --home=$HOME/.gaia2
+
+查询账户
+
+    #gaiacli account 9B35301CCE4920D68D1466335852A3BF7FC21695
+    其中的地址为validator的地址。
+    
+    {
+          "type": "16542275FBFAB8",
+          "value": {
+            "BaseAccount": {
+              "address": "9B35301CCE4920D68D1466335852A3BF7FC21695",
+              "coins": [
+                {
+                  "denom": "mycoin",
+                  "amount": 9007199254740992
+                }
+              ],
+              "public_key": null,
+              "sequence": 0
+            },
+            "name": ""
+          }
+        }
+        
+    #curl localhost:46657/validators
+    
+    {
+      "jsonrpc": "2.0",
+      "id": "",
+      "result": {
+        "block_height": 160,
+        "validators": [
+          {
+            "address": "573BA4FEE9167FB1416A5B31158CEBC4426426B8",
+            "pub_key": {
+              "type": "AC26791624DE60",
+              "value": "cApdn9ZAHajfQl+nChMoxeM1WioQgdOayYEJaslCTk4="
+            },
+            "voting_power": 10,
+            "accum": 0
+          }
+        ]
+      }
+    }
+    
+    #cat  $HOME/.gaiad1/config/priv_validators.json
+    
+    {
+    	"address": "573BA4FEE9167FB1416A5B31158CEBC4426426B8",
+    	"pub_key": {
+    		"type": "AC26791624DE60",
+    		"value": "cApdn9ZAHajfQl+nChMoxeM1WioQgdOayYEJaslCTk4="
+    	},
+    	"last_height": 165,
+    	"last_round": 0,
+    	"last_step": 3,
+    	"last_signature": {
+    		"type": "6BF5903DA1DB28",
+    		"value": "ni2aVku0oWqGL7pzfeFx+xDDWPoUz/iEYB/Wy54h6mR5oaiETDLyBofX3CUEkNSGbQ72ayWtnWJQfzGP+0OOAg=="
+    	},
+    	"last_signbytes": "7B2240636861696E5F6964223A22746573742D636861696E2D436536374B45222C224074797065223A22766F7465222C22626C6F636B5F6964223A7B2268617368223A2241303931333839343842324239463831363632454530353232443145343637353542303230434138222C227061727473223A7B2268617368223A2238363037363132424646453532463834383641443845353846354642414346374443374442333941222C22746F74616C223A317D7D2C22686569676874223A3136352C22726F756E64223A302C2274696D657374616D70223A22323031382D30352D31355430363A34333A33312E3433355A222C2274797065223A327D",
+    	"priv_key": {
+    		"type": "954568A3288910",
+    		"value": "095Z4ZJEb2rnJzJxyonEQyp0aunNxVBAzFYm9H8fxOpwCl2f1kAdqN9CX6cKEyjF4zVaKhCB05rJgQlqyUJOTg=="
+    	}
+    }
+    
+    pk和address一致！
