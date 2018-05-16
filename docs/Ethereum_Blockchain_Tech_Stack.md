@@ -19,6 +19,10 @@
 
 ##以太坊区块链
 
+设置conbase，用于挖矿
+    personal.newAccount()
+    miner.setEtherbase(eth.accounts[0])
+
 ###区块大小
 
 ###区块链大小
@@ -30,7 +34,7 @@ PoW(Ethash)
 
 PoA(Clique)
 
-PoS(TOodo)
+PoS(Todo)
 
 ##P2P协议
 Kad
