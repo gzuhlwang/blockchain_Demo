@@ -13,7 +13,14 @@
 
     Any Ethereum explorer works!
     
-    
+    1、tendermint node
+    2、ethermint --rpc --rpccorsdomain "http://localhost:8081
+    3、git clone https://github.com/irisnet/ethermint-explorer
+    4、cd ethermint-explorer
+    6、修该/src/main.js中的url到http://localhost:8545
+       或者http://IP:8545  这里的IP是服务器的公网IP
+    5、npm install
+    6、npm run dev
 # tendermint + ethermint
 
     Q:panic: Tendermint state.AppHash does not match AppHash after replay. Got 56E81F171BCC55A6FF8345E692C0F86E5B48E01B996CADC001622FB5E363B421, expected ...
