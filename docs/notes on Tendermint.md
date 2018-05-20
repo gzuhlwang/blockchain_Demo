@@ -1,8 +1,8 @@
 # Tendermint
 
-    1、弱同步共识算法
+    1、弱同步共识算法   (Tendermint core)
 
-    2、PoS-based BFT 
+    2、PoS-based BFT (Tendermint Core)
     
     3、微服务架构
     
@@ -51,3 +51,9 @@
     	EndBlock(RequestEndBlock) ResponseEndBlock       // Signals the end of a block, returns changes to the validator set
     	Commit() ResponseCommit                          // Commit the state and return the application Merkle root hash
     }
+  
+# Tendermint Core
+笼统地讲，tendermint core两大使命：
+    
+    1、底层p2p网络
+    2、交易排序
