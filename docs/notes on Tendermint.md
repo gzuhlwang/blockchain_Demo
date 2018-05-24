@@ -59,3 +59,7 @@
     
     1、底层p2p网络（网络层）
     2、交易排序(共识层)
+    
+# Tendermint vs Casper 
+
+    https://blog.cosmos.network/consensus-compare-casper-vs-tendermint-6df154ad56ae
