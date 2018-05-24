@@ -8,6 +8,8 @@
     
     4、lay the foundation of casper and other project(Polkadot)  
     
+    5、Tendermint设计中强调一致性C和分区容忍P，妥协了可用性A。
+    
 
 # Ethermint explorer
 
@@ -55,5 +57,5 @@
 # Tendermint Core
 笼统地讲，tendermint core两大使命：
     
-    1、底层p2p网络
-    2、交易排序
+    1、底层p2p网络（网络层）
+    2、交易排序(共识层)
